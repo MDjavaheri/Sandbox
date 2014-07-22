@@ -14,6 +14,12 @@ class Player(object):
         self.score -= 1
 P1 = Player(0)
 P2 = Player(0)
+class Ship(object):
+    def __init__(self, orientation, start_point, length):
+        self.orientation = orientation
+        self.start_point = start_point
+        self.length = length
+    length = 1
 
 if players == 1:
     board = []
