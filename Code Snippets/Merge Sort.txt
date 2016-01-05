@@ -1,0 +1,41 @@
+	/**
+	 * Uses Merge Sort to sort the array  
+	 * @param array to sort
+	 * @param left index value
+	 * @param right index value
+	 */
+	public static void mergeSort(int[] array, int low, int high) {
+		if (low < high) {
+			int middle = (low + high)/2;
+			mergeSort(array, low, middle);
+			mergeSort(array, middle + 1, high);
+			merge(array, low, middle, high);
+		}
+	}
+		public static void merge(int[] array, int low, int middle, int high) {
+for (int z = low; z <= high; z++) {
+			tempArray[z] = array[z];
+		}
+		int i = low, j = middle + 1, k = low;
+		while (i <= middle && j <= high) {
+			if (tempArray[i] <= tempArray[j]) {
+				array[k] = tempArray[i];
+				i++;
+			}
+			else {
+				array[k] = tempArray[j];
+				j++;
+			}
+			k++;
+		}
+		while (i <= middle) {
+			array[k] = tempArray[i];
+			k++;
+			i++;
+		}
+		while (j <= high) {
+			array[k] = tempArray[j];
+			k++;
+			j++;
+		}
+}

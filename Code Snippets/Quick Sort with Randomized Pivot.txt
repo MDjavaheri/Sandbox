@@ -1,0 +1,21 @@
+	public static void randomizedQuickSort(int[] array, int low, int high) {
+		if (low < high) {
+			int pivot = randomizedPartition(array, low, high); //final position of the pivot
+			randomizedQuickSort(array, low, pivot - 1);
+			randomizedQuickSort(array, pivot + 1, high);
+		}
+	}
+	/**
+	 * partitions the array for quick sort
+	 * @param array to be partitioned
+	 * @param low first index of array section
+	 * @param high last index of array section
+	 * @return pivot index
+	 */
+	public static int randomizedPartition(int[] array, int low, int high) {
+		int i = rand.nextInt(high - low) + low + 1;
+		int temp = array[i];                //swap elements
+        array[i] = array[high];
+        array[high] = temp;		
+        return partition(array, low, high);
+	}
