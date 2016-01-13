@@ -12,8 +12,8 @@
 			merge(array, low, middle, high);
 		}
 	}
-		public static void merge(int[] array, int low, int middle, int high) {
-for (int z = low; z <= high; z++) {
+	public static void merge(int[] array, int low, int middle, int high) {
+		for (int z = low; z <= high; z++) {
 			tempArray[z] = array[z];
 		}
 		int i = low, j = middle + 1, k = low;

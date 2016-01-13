@@ -1,0 +1,47 @@
+.banner h1, .banner h4 {
+    display: inline;
+}
+#container li {
+    display: inline;
+    border-bottom: 1px solid;
+    margin-right: 22px;
+}
+.form-control {
+    width: 50%;
+}
+.schedule {
+    width: 50%;
+    float: left;
+}
+table, th, tr {
+    text-align: center;
+}
+.full {
+    color: white;
+    background-color: firebrick;
+}
+.seatSelector {
+    width: 50%;
+    float: right;
+}
+.seats {
+    width: 200px;
+}
+.seat {
+	border: 5px solid black;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+.seat:nth-child(3n):not(.seat:nth-child(12)) {
+    margin-left: 70px;
+}
+.vacant {
+    background-color: green;
+}
+.occupied {
+    background-color: firebrick;
+}
+#info {
+    font-size: 24px;
+}

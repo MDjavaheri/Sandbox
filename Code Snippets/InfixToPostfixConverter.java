@@ -25,7 +25,7 @@ public final class Converter {
 		loadStacks();
 		Stack<String> operators = new Stack<String>();
 		ArrayList<String> postfix = new ArrayList<String>();
-		String[] infix = expression.split("((?<=[+/*%\\(\\)])|(?=[+/*%\\(\\)])|(?=(--))|(?=(-[\\d\\(]))|(?<=[\\d\\)]-))");
+		String[] infix = expression.split("((?<=[+/*%\\(\\)])|(?=[+/*%\\(\\)])|(?=(--))|(?=(-[\\d\\(]))|(?<=[\\d\\)]-))");//best regex ever.
 		for (int i = 0; i < infix.length; i++){//convert
 			String current = infix[i];
 			if (infix[i].equals("")) {

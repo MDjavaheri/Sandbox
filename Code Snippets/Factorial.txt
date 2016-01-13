@@ -7,7 +7,7 @@
 		int total = 1;
 		while (n > 1) {
 			total *= n;
-			n = n - 1;
+			n--;
 		}
 		return total;
 	}
