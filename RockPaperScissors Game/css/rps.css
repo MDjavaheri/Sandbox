@@ -2,7 +2,7 @@ body {
 	font-size: 14px;
 	text-align: center;
 }
-#gamearea, #testLog {
+#gamearea, #log {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -38,7 +38,7 @@ body {
 #ties {
 	color: orange;
 }
-#gameLog{
+/*#gameLog{
 	border-color: grey;
 	border-width: 1px;
 	border-style: solid;
@@ -47,9 +47,17 @@ body {
 	height: 400px;
 	width: 200px;
 	overflow: scroll;
-}
-#testLog {
+}*/
+#log {
 	width: 75%;
 	height: 200px;
 	margin-top: 20px; 
+	text-align: left;
+	overflow: auto;
+}
+#log span {
+	border: thin, solid;
+	text-align: left;
+	top: 0;
+	left: 0;
 }

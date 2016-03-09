@@ -9,6 +9,7 @@
 		<!--JS-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/underscore-min.js" type="text/javascript"></script>
 		<script src="js/rps.js" type="text/javascript"></script>
 
 	</head>
@@ -17,7 +18,9 @@
 		<h1>Rock, Paper, Scissors!</h1>
 
 		<p>
-			[Instructions]
+			You know the rules!
+			<br>
+			Let's Play!
 		</p>
 
 		<div id="gamearea">
@@ -27,11 +30,8 @@
 				<div class="move">
 				</div>
 			</div>
-			<p id="taunt">Let's Play!</p>
+			<p id="taunt">Pick an opponent gameplay strategy to mix it up a little.</p>
 			
-			<!--Game Log of Moves and Results-->
-			<div id="gamelog" class="container">
-			</div>
 
 			<!--Pick a game strategy for the Computer and a move to play-->
 			<div id="playerDashboard" class="container">
@@ -45,11 +45,11 @@
 				</div>
 				<!--Change Computer's Playing' Strategy-->
 				<div id="strategy" class="controls">
-					<h3>Computer Using: <span id="strategyDisplay">Random</span> Strategy</h3> <!--Make into a bootstrap button-->
-					<div class="btn-group" role="group" aria-label="...">
-						<button type="button" class="btn btn-default" value="last">Last Move</button>
-						<button type="button" class="btn btn-default" value="fave">Most Popular Move</button>
-						<button type="button" class="btn btn-default active" aria-pressed="true">Random</button>
+					<h3>Computer Strategy: <span>Random</span> Move</h3> <!--Make into a bootstrap button-->
+					<div class="btn-group" role="group" aria-label="">
+						<button type="button" class="btn btn-default strButton" value="Last">Last Move</button>
+						<button type="button" class="btn btn-default strButton" value="Most Popular" >Most Popular Move</button>
+						<button type="button" class="btn btn-default strButton" value="Random">Random</button>
 					</div>
 				</div>
 				<!--Pick Your Next Move-->
@@ -71,7 +71,9 @@
 			</div>
 		</div>
 		<footer>
-			<div class="well" id="testLog">
+			<!--Game Log of Moves and Results, also logs Test Results -->
+			<div class="well" id="log">
+				<!--<span>Log</span>-->
 			</div>
 		</footer>
 	</body>
