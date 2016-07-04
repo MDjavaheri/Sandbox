@@ -14,11 +14,13 @@ $(function() {
 	
 	//The brains of the game
 	var controller = newController();
-	var scoreBoard = newScoreBoard();
-	var computer = overseasFactory();
 		
 	//Controller: Takes GUI input and runs the game
 	function newController() {
+		
+		var scoreBoard = newScoreBoard();
+		var computer = overseasFactory();
+		
 		var Controller = {
 			//turn counter for logging
 			turn: 1,
